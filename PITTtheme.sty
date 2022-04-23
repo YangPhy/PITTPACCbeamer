@@ -1,0 +1,107 @@
+\usepackage{tikz}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+
+
+% Logo at frontpage -------------------
+\titlegraphic{\includegraphics[width=4cm]{Logo/pitt_logo.png}}
+% Logo at frontpage -------------------
+
+% fonts ----------------
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{AlegreyaSans} %% Option 'black' gives heavier bold face
+%% The 'sfdefault' option to make the base font sans serif
+\renewcommand*\oldstylenums[1]{{\AlegreyaSansOsF #1}}
+% fonts ----------------
+
+% Front page figure -----------------------------
+%\usebackgroundtemplate{
+%\tikz[overlay,remember picture] \node[opacity=0.25, at=(current page.center)] {
+%   \includegraphics[height=\paperheight,width=\paperwidth]{Logo/front.jpg}};
+%}
+
+\newcommand\Background{
+\tikz[overlay,remember picture] \node[opacity=0.25, at=(current page.center)] {
+   \includegraphics[height=\paperheight,width=\paperwidth]{Logo/front.jpg}};
+}
+% Front page figure -----------------------------
+
+% LOGO in each slide -----------------------------
+% You can choose PITT logo or PITTPACC logo:
+%\logo{\includegraphics[height=.3cm]{Logo/pitt_logo.png}}
+\logo{\includegraphics[height=1.5cm]{Logo/pittpacc_logo.png}}
+% LOGO in each slide -----------------------------
+
+% set COLORS -----------------------------
+\definecolor{PittRoyal}{rgb}{0.0, 0.21, 0.58}
+\definecolor{PittGold}{rgb}{1.0, 0.72, 0.11}
+%\useoutertheme[subsection=false]{miniframes} %eliminate subsection header by each slide
+\setbeamercolor{title}{fg=PittRoyal}
+\setbeamercolor{frametitle}{fg=PittRoyal}
+\usecolortheme[named=PittRoyal]{structure}
+\mode<presentation>
+{
+  \usetheme[compress]{Dresden}
+\setbeamercolor{upper separation line head}{bg=PittRoyal}
+
+  %\setbeamertemplate{navigation symbols}{}
+  %\setbeamertemplate{caption}[numbered]
+} 
+\useoutertheme{miniframes} %colors healine
+\setbeamercolor{section in head/foot}{parent=PittRoyal, fg=PittRoyal}
+
+\defbeamertemplate*{headline}{miniframes theme no subsection}
+{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}
+}
+% set COLORS -----------------------------
+
+%gets rid of bottom navigation bars
+\setbeamertemplate{footline}[page number]{}
+%gets rid of navigation symbols
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{frametitle}{}
+
+
+
+
+%--------------------------------------------------------
+%	NEW ELEMENTS
+%--------------------------------------------------------
+% DECLARE plim operator
+\DeclareMathOperator{\plim}{plim}
+% DECLARE Covariance operator
+\DeclareMathOperator{\Cov}{\mathrm{Cov}}
+% DECLARE Expectation operator
+\DeclareMathOperator{\E}{\mathrm{E}}
+% DECLARE Symbol of Real numbers
+\DeclareMathOperator{\R}{\mathbb{R}}
+% DECLARE Variance operator
+\DeclareMathOperator{\Var}{\mathrm{Var}}
+% DECLARE Asymptotic variance operator
+\DeclareMathOperator{\Avar}{\mathrm{Avar}}
+% DECLARE V of Variance operator
+\DeclareMathOperator{\V}{\mathrm{V}}
+% DECLARE Correlation operator
+\DeclareMathOperator{\Corr}{\mathrm{Corr}}
+% DECLARE Trace operator
+\DeclareMathOperator{\tr}{\mathrm{tr}}
+% DECLARE Normal distribution symbol
+\DeclareMathOperator{\N}{\mathcal{N}}
+% DECLARE "O" operator
+\DeclareMathOperator{\Op}{\mathcal{O}}
+% DECLARE "little o" operator
+\DeclareMathOperator{\op}{\mathrm{o}}
+% DECLARE Rank operator 
+\DeclareMathOperator{\rank}{rank}
+% DECLARE Lagrange symbol
+\DeclareMathOperator{\La}{\mathcal{L}}
