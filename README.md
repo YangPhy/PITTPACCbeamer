@@ -1,5 +1,6 @@
 # PITTPACCbeamer
 Unofficial beamer template for PITT PACC, University of Pittsburgh
+
 Author: Dr. Yang Ma
 
 Based on [FRED UF Beamer theme](https://www.overleaf.com/latex/templates/fred-uf-beamer-theme/rryfbqfnvnjs) by Ariel Soto-Caro.
