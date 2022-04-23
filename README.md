@@ -3,6 +3,8 @@ Unofficial beamer template for PITT PACC, University of Pittsburgh
 
 Based on [FRED UF Beamer theme](https://www.overleaf.com/latex/templates/fred-uf-beamer-theme/rryfbqfnvnjs) by Ariel Soto-Caro.
 
+Check [preview](main.tex) to see how it looks like.
+
 ## [Yang's defense](YangDefense/README.md)
 ## Example:
 * The [style file](PITTtheme.sty) can be modified if needed. This is also where new commands are defined.
