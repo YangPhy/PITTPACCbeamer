@@ -4,7 +4,9 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{amsmath,amssymb}
-
+\usepackage{physics}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{appendixnumberbeamer}
 
 % Logo at frontpage -------------------
 \titlegraphic{\includegraphics[width=4cm]{Logo/pitt_logo.png}}
@@ -31,13 +33,19 @@
 
 % LOGO in each slide -----------------------------
 % You can choose PITT logo or PITTPACC logo:
-%\logo{\includegraphics[height=.3cm]{Logo/pitt_logo.png}}
+% \logo{\includegraphics[height=.4cm]{Logo/pitt_logo.png}}
 \logo{\includegraphics[height=1.5cm]{Logo/pittpacc_logo.png}}
 % LOGO in each slide -----------------------------
 
 % set COLORS -----------------------------
 \definecolor{PittRoyal}{rgb}{0.0, 0.21, 0.58}
 \definecolor{PittGold}{rgb}{1.0, 0.72, 0.11}
+\definecolor{INFNBlue1}{rgb}{0.0, 0.18, 0.29}
+\definecolor{INFNBlue2}{rgb}{0.26, 0.59, 0.71}
+\definecolor{green}{rgb}{0.0, 0.4, 0.0}
+\definecolor{nicered}{rgb}{0.5,0.,0.}
+\definecolor{nicegreen}{rgb}{0.,0.5,0.}
+\definecolor{niceblue}{rgb}{0.,0.,0.5}
 %\useoutertheme[subsection=false]{miniframes} %eliminate subsection header by each slide
 \setbeamercolor{title}{fg=PittRoyal}
 \setbeamercolor{frametitle}{fg=PittRoyal}
@@ -50,7 +58,7 @@
   %\setbeamertemplate{navigation symbols}{}
   %\setbeamertemplate{caption}[numbered]
 } 
-\useoutertheme{miniframes} %colors healine
+% \useoutertheme{miniframes} %colors healine
 \setbeamercolor{section in head/foot}{parent=PittRoyal, fg=PittRoyal}
 
 \defbeamertemplate*{headline}{miniframes theme no subsection}
@@ -72,7 +80,33 @@
 %\setbeamertemplate{frametitle}{}
 
 
+% Some new settings  -----------------------------
+% set the font theme for formulae
+\usefonttheme[onlymath]{serif}
+% Insert reference
+\newcommand\bib[1]{\textcolor{green}{\tiny[#1]}}
 
+
+%--------------------------------------------------------
+%	NEW comments for writing formulae
+%--------------------------------------------------------
+
+\newcommand{\GeV}{~\textrm{GeV}}
+\newcommand{\TeV}{~\textrm{TeV}}
+\newcommand{\QCD}{\textrm{QCD}}
+\newcommand{\muQCD}{\mu_{\textrm{QCD}}}
+\newcommand{\muEW}{\mu_{\textrm{EW}}}
+
+\newcommand{\ddL}{\frac{\dd }{\dd L}}
+\newcommand{\calO}{\mathcal{O}}
+
+\newcommand{\bea}{\begin{equation}\begin{aligned}}
+\newcommand{\eea}{\end{aligned}\end{equation}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+
+\newcommand{\lsea}{\ell{\textrm{sea}}}
+\newcommand{\lval}{\ell{\textrm{val}}}
 
 %--------------------------------------------------------
 %	NEW ELEMENTS
@@ -94,14 +128,14 @@
 % DECLARE Correlation operator
 \DeclareMathOperator{\Corr}{\mathrm{Corr}}
 % DECLARE Trace operator
-\DeclareMathOperator{\tr}{\mathrm{tr}}
+% \DeclareMathOperator{\tr}{\mathrm{tr}}
 % DECLARE Normal distribution symbol
 \DeclareMathOperator{\N}{\mathcal{N}}
 % DECLARE "O" operator
 \DeclareMathOperator{\Op}{\mathcal{O}}
 % DECLARE "little o" operator
-\DeclareMathOperator{\op}{\mathrm{o}}
+% \DeclareMathOperator{\op}{\mathrm{o}}
 % DECLARE Rank operator 
-\DeclareMathOperator{\rank}{rank}
+% \DeclareMathOperator{\rank}{rank}
 % DECLARE Lagrange symbol
 \DeclareMathOperator{\La}{\mathcal{L}}
